@@ -2,6 +2,7 @@ const express = require('express')
 require('dotenv').config()
 
 const routes = require('./routes')
+const { connectDB } = require('./lib/utils/connection')
 
 const app = express()
 
@@ -11,6 +12,7 @@ app.get('/test', async (req, res) => {
     res.json({ message: "Hello World" })
 })
 
+connectDB(process.env.MONGO_URI)
 routes(app)
 
 
