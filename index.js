@@ -8,10 +8,6 @@ const app = express()
 
 const PORT = process.env.PORT || 4001
 
-app.get('/test', async (req, res) => {
-    res.json({ message: "Hello World" })
-})
-
 connectDB(process.env.MONGO_URI)
 routes(app)
 

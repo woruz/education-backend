@@ -3,6 +3,7 @@ const userAuth = require("./userAuth.js");
 const role = require("./role.js")
 const exam = require("./exam.js")
 const studentExamDetails = require("./studentExamDetails.js")
+const courses = require("./courses.js")
 
 
 module.exports = {
@@ -10,5 +11,6 @@ module.exports = {
     userAuth,
     role,
     exam,
-    studentExamDetails
+    studentExamDetails,
+    courses
 }
